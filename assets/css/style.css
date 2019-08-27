@@ -5,25 +5,41 @@ body {
     background-position: center;
     background-attachment: fixed;
     background-color: rgb(0, 0, 0);
-    font-family: 'Maven Pro', sans-serif;
-    font-size: 24px;
 }
-.container-fluid {
+.header {
     font-family: 'Maven Pro', sans-serif;
     font-size: 4rem;
-    width:100%;
-    height:100px;
+    width: 100%;
+    height: 100px;
     float: left;
     text-align: center;
+    justify-content: center;
     color: rgb(155, 90, 155);;
 }
-#instructions {
+.container {
     font-family: 'Maven Pro', sans-serif;
     font-size: 1rem;
-    width:40%;
+    width: auto;
+    height: auto;
     float: left;
     text-align: left;
     color: rgb(155, 90, 155);
     margin: 1%;
-
+    border: solid;
+    border-width: 3px;
 }
+#button {
+    float: left;
+    border-style: ridge;
+    border: rgb(155, 90, 155);
+    border-width: 3px;
+    height: 40px;
+}
+
+
+
+    /*  <div class="container" id="randomNumber"></div>
+        <div class="container" id="winsLosses"></div>
+        <div class="container" id="crystals"></div>
+        <div class="container" id="totalScore">Total Score:</div>
+        <div class="container" id="scoreNumber"></div> */
