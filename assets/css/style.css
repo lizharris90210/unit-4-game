@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 body {
     background-image: url('https://wallpaperaccess.com/full/629374.jpg');
     background-size: 100%;
@@ -19,27 +22,52 @@ body {
 .container {
     font-family: 'Maven Pro', sans-serif;
     font-size: 1rem;
-    width: auto;
-    height: auto;
     float: left;
     text-align: left;
     color: rgb(155, 90, 155);
-    margin: 1%;
+    margin: 5px;
     border: solid;
-    border-width: 3px;
+    border-width: 1px;
+    height: auto;
+    width: auto;
 }
-#button {
+#target {
     float: left;
-    border-style: ridge;
-    border: rgb(155, 90, 155);
-    border-width: 3px;
-    height: 40px;
+    cursor:pointer;
+    border:none;
+    border-radius: 8px;
+    margin: 5px;
+}
+#amethyst {
+    float: left;
+    cursor:pointer;
+    border:none;
+    border-radius: 8px;
+    margin: 5px;
+}
+#garnet {
+    float: left;
+    cursor:pointer;
+    border:none;
+    border-radius: 8px;
+    margin: 5px;
+}
+#pearl {
+    float: left;
+    cursor:pointer;
+    border:none;
+    border-radius: 8px;
+    margin: 5px;
+}
+#steven {
+    float: left;
+    cursor:pointer;
+    border:none;
+    border-radius: 8px;
+    margin: 5px;
+}
+.image {
+    width: 100px;
+    height: 100px;
 }
 
-
-
-    /*  <div class="container" id="randomNumber"></div>
-        <div class="container" id="winsLosses"></div>
-        <div class="container" id="crystals"></div>
-        <div class="container" id="totalScore">Total Score:</div>
-        <div class="container" id="scoreNumber"></div> */
