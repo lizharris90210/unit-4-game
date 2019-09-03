@@ -3,42 +3,96 @@
 
 <head>
     <meta charset="utf-8" name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     </meta>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Maven+Pro:900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
 </head>
 
 <body>
     <title>Crystals Collector Game</title>
 
-    <div class="header">Crystal Gems Collector</div>
-    <div class="container" id="instructions">
-        Four Crystal Gems are displayed. Click the target to start.
-        A number has been chosen as your target.
-        Click on a Crystal Gem to add specific points to your score counter.
-        You win when your score matches the target number.
-        You lose when you go over the target number.
-    </div>
-    <div class="container" id="randomNumber">
-        <input class="image" type="image" id="target" src="assets/images/target.png">
+    <div class="header">
+        <div class="container-fluid" id="header">Crystal Gems Collector
         </div>
     </div>
-    <div class="container" id="winsLosses"></div>
-    <div class="container" id="crystals">
-        <input class="image" type="image" id="amethyst" src="assets/images/amethyst.png"></input>
-        <input class="image" type="image" id="garnet" src="assets/images/garnet.jpeg"></input>
-        <input class="image" type="image" id="pearl" src="assets/images/pearl.jpeg"></input>
-        <input class="image" type="image" id="steven" src="assets/images/steven.jpeg"></input>
-    </div>
-    <div class="container" id="totalScore">Total Score:</div>
-    <div class="container" id="scoreNumber"></div>
 
-    <script src="assets/javascript/game.js"></script>
+    <div class="container-fluid" id="instructions">
+        <div class="row justify-content-md-center">
+            <div class="col-2">
+            </div>
+            <div class="col-8">
+                Four Crystal Gems are displayed. Click the target to start.
+                A number has been chosen as your target.
+                Click on a Crystal Gem to add specific points to your score counter.
+                You win when your score matches the target number.
+                You lose when you go over the target number.
+            </div>
+            <div class="col-2">
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="randomNumber">
+        <div class="row justify-content-md-center">
+            <div class="col-sm">
+                <p id="randomTarget">#</p>
+            </div>
+            <div class="col-sm">
+                <p id="wins">wins</p>
+            </div>
+            <div class="col-sm">
+                <p id="losses">losses</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid" id="crystals">
+    <div class="row justify-content-md-center">
+            <div class="col-sm">
+                <input type="image" src="assets/images/amethyst.png" class="image" id="amethyst" />
+            </div>
+            <div class="col-sm"> 
+                <input type="image" src="assets/images/garnet.jpeg" class="image" id="garnet" />
+            </div>   
+            <div class="col-sm">
+                <input type="image" src="assets/images/pearl.jpeg" class="image" id="pearl" />
+            </div>
+            <div class="col-sm">
+                <input type="image" src="assets/images/steven.jpeg" class="image" id="steven" />
+            </div>
+            </div>
+          </div>
+
+    <div class="container-fluid" id="totalScore">
+        <div class="row align-items-center">
+            <div class="col-lg">
+                Total Score:
+            </div>
+            <div class="col-lg">
+            </div>
+            <div class="col-lg">
+            </div>
+        </div>
+        <div class="row align-items-center">
+                <div class="col-lg" id="scoreNumber">scoreNumber
+                </div>
+                <div class="col-lg">
+                </div>
+                <div class="col-lg">
+                </div>
+            </div>
+    </div>
+
+    <div class="container-fluid" id="scoreNumber"></div>
+
+    <script src="assets/javascript/game.js" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+</script>
 </body>
 
 </html>

@@ -9,7 +9,10 @@ body {
     background-attachment: fixed;
     background-color: rgb(0, 0, 0);
 }
-.header {
+.row {
+    grid-template-rows: max-content;
+}
+#header {
     font-family: 'Maven Pro', sans-serif;
     font-size: 4rem;
     width: 100%;
@@ -19,55 +22,35 @@ body {
     justify-content: center;
     color: rgb(155, 90, 155);;
 }
-.container {
+.container-fluid {
     font-family: 'Maven Pro', sans-serif;
-    font-size: 1rem;
+    font-size: 14px;
     float: left;
     text-align: left;
     color: rgb(155, 90, 155);
     margin: 5px;
-    border: solid;
-    border-width: 1px;
-    height: auto;
-    width: auto;
+    display: inline-flex;
+    flex-direction: row;
 }
-#target {
+#randomNumber {
     float: left;
     cursor:pointer;
-    border:none;
-    border-radius: 8px;
-    margin: 5px;
-}
-#amethyst {
-    float: left;
-    cursor:pointer;
-    border:none;
-    border-radius: 8px;
-    margin: 5px;
-}
-#garnet {
-    float: left;
-    cursor:pointer;
-    border:none;
-    border-radius: 8px;
-    margin: 5px;
-}
-#pearl {
-    float: left;
-    cursor:pointer;
-    border:none;
-    border-radius: 8px;
-    margin: 5px;
-}
-#steven {
-    float: left;
-    cursor:pointer;
-    border:none;
-    border-radius: 8px;
+    width:auto;
     margin: 5px;
 }
 .image {
     width: 100px;
     height: 100px;
+    float: left;
+    cursor:pointer;
+    border:none;
+    margin: 5px;
+}
+#crystals {
+    display:grid;
+    grid-template-columns: auto auto auto auto; 
+}
+#randomTarget {
+    font-size: 36px;
 }
 
