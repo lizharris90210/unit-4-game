@@ -32,12 +32,6 @@ body {
     display: inline-flex;
     flex-direction: row;
 }
-#randomNumber {
-    float: left;
-    cursor:pointer;
-    width:auto;
-    margin: 5px;
-}
 .image {
     width: 100px;
     height: 100px;
@@ -50,7 +44,16 @@ body {
     display:grid;
     grid-template-columns: auto auto auto auto; 
 }
-#randomTarget {
-    font-size: 36px;
+#randomTarget,
+#target {
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#totalScore {
+    font-size: 24px;
 }
 

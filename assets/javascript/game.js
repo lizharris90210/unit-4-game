@@ -1,45 +1,73 @@
 // start jQuery
-$( document ).ready(function () {
-    var gems = ['#garnet', '#amethyst', '#pearl', '#steven'];
-    var randomGem = 
-    // assigns gem random integer 1 to 12
-        function randomGem() {
-        min = Math.ceil(1);
-        max = Math.floor(12);
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
-    var randomTarget = 
-        function randomTarget() {
-        min = Math.ceil(19);
-        max = Math.floor(120);
-        return Math.floor(Math.random() * (max - min)) + min;
-    }
-    // winsLosses
+$( document ).ready(function() {
+
+// winsLosses
     var wins = 0;
     var losses = 0;
-
-    // starts at 0 and adds every gem click randomGem until = randomTarget, or goes over
     var scoreNumber = 0;
-        document.getElementById("image").onclick = function() {
-        document.getElementById("totalScore").innerHTML = "image.randomGem" + "scoreNumber";
+// crystals
+    var amethyst= random(1, 12);
+	var garnet= random(1, 12);
+	var pearl= random(1, 12);
+    var steven= random(1, 12);
+// assigns random integer
+    function random(min,max){
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.floor(Math.random() * (max-min +1)) + min;
+    }
+    var randomTarget = random(19, 120);
+        $("#target").html(random);
+// reset
+	function reset(){
+		scoreNumber = 0;
+		$("#scoreNumber").text(scoreNumber);
+		amethyst= random(1, 12);
+	    garnet= random(1, 12);
+	    pearl= random(1, 12);
+        steven= random(1, 12);
+        randomTarget= random(19, 120);
+    }
+// functions on click
 
-        if (scoreNumber === randomTarget) {
-            document.getElementById('wins').innerHTML = "Wins:" + "1";
-        } else {(scoreNumber > randomTarget) 
-            document.getElementById('losses').innerHTML = "Losses:" + "1";
-        }}
-    
-    // images to click
-        // randomTarget returns a random integer 19 to 120
-    ('#randomTarget').on("click") =
-        function randomTarget(){
-        min = Math.ceil(19);
-        max = Math.floor(120);
-        return Math.floor(Math.random() * (max - min)) + min;
-        }
-        // array of crystals gets assigned randomGem number
-        document.getElementsByClassName("image").addEventListener("click", function (randomGem) {
-                document.getElementById("image").innerHTML = randomGem(1, 12);  
-        })
-
+    $('#shield').on('click', function() {
+        $("#target").text(randomTarget);
+    })
+    $("#amethyst").on("click", function(){
+		scoreNumber += amethyst;
+		winLose();
+        $('#scoreNumber').text(scoreNumber);	
+        console.log('amethyst',amethyst)
+	});
+    $("#garnet").on("click", function(){
+		scoreNumber += garnet;
+		winLose();
+        $('#scoreNumber').text(scoreNumber);	
+        console.log('garnet', garnet)
     });
+    $("#pearl").on("click", function(){
+		scoreNumber += pearl;
+		winLose();
+        $('#scoreNumber').text(scoreNumber);	
+        console.log('pearl', pearl)
+    });
+    $("#steven").on("click", function(){
+		scoreNumber += steven;
+		winLose();
+        $('#scoreNumber').text(scoreNumber);	
+        console.log('steven', steven)
+	});
+// winLose
+    function winLose (){
+        if (scoreNumber === randomTarget){
+            wins += 1;
+            alert("Win!");
+            $('#wins').text('Wins:' + wins);
+            reset();
+        } else if(scoreNumber > randomTarget){
+            losses += 1;
+            alert("You lose!");
+            $('#losses').text('Losses:' + losses);
+            reset();
+        }}
+});
